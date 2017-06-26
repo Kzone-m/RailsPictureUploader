@@ -1,0 +1,15 @@
+/Users/hideyoshitakahashi/.rbenv/versions/2.2.5/bin/ruby -r ./siteconf20170625-1149-1f40s0e.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20170625-1149-da5qrn/byebug

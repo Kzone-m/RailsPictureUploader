@@ -1,0 +1,13 @@
+current directory: /Users/Kazune/Desktop/rails_workspace/sample69/vendor/bundle/ruby/2.2.0/gems/json-2.1.0/ext/json
+/Users/Kazune/.rbenv/versions/2.2.5/bin/ruby -r ./siteconf20170626-80680-s2byy2.rb extconf.rb
+creating Makefile
+
+current directory: /Users/Kazune/Desktop/rails_workspace/sample69/vendor/bundle/ruby/2.2.0/gems/json-2.1.0/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/Kazune/Desktop/rails_workspace/sample69/vendor/bundle/ruby/2.2.0/gems/json-2.1.0/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/Kazune/Desktop/rails_workspace/sample69/vendor/bundle/ruby/2.2.0/gems/json-2.1.0/ext/json
+make "DESTDIR=" install

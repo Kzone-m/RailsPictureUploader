@@ -1,0 +1,35 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+html,body,
+ul,ol,li,
+h1,h2,h3,h4,h5,h6,p,div{
+	margin:0;
+	padding:0;
+}
+
+li{
+	list-style:none;
+}
+
+a{
+	text-decrotation:none;
+}
+
+#error-explanation{
+  margin: 10px;
+}
+
+#error-messages{
+  color: red;
+  padding-left: 5%;
+  padding-bottom: 8px;
+}
+
+.form-item-wrapper{
+  margin: 8px 0;
+}
+
+#submit{
+  width: 20%;
+}
