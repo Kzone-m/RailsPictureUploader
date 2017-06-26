@@ -3,10 +3,10 @@
 ## 作り方
 
 ## 1: rails appの作成
-$ rails new PictureUploaderApp
-$ ls
-=> PictureUploaderApp
-$ cd PictureUploaderApp
+$ rails new PictureUploaderApp<br>
+$ ls<br>
+=> PictureUploaderApp<br>
+$ cd PictureUploaderApp<br>
 
 
 ###./Gemfile(デフォルトのGemファイルに必要な物を追加する)
