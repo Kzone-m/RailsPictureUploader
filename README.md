@@ -1,15 +1,15 @@
-#画像投稿機能
+# 画像投稿機能
 
-##作り方
+## 作り方
 
-##1: rails appの作成
+## 1: rails appの作成
 $ rails new PictureUploaderApp
 $ ls
 => PictureUploaderApp
 $ cd PictureUploaderApp
 
-デフォルトのGemファイルに必要な物を追加する
-###./Gemfile
+
+###./Gemfile(デフォルトのGemファイルに必要な物を追加する)
 gem 'jquery-rails'
 gem 'bootstrap-sass', '3.3.6'
 gem 'faker',          '1.6.6'
@@ -22,7 +22,7 @@ gem 'fog',                     '1.38.0'
 $ bundle install --without production --path vendor/bundle
 
 
-##2: コントローラーの作成
+## 2: コントローラーの作成
 $ rails g controller posts index new edit show
 
 ### ./config/routes.rb
@@ -55,7 +55,7 @@ class PostsController < ApplicationController
 end
 
 
-##3: モデルとPictureUploaderの作成
+## 3: モデルとPictureUploaderの作成
 $ rails g uploader Picture
 $ rails g model Post content:text picture:string
 $ rails db:migrate
