@@ -20,7 +20,8 @@ gem 'mini_magick',             '4.5.1'
 gem 'fog',                     '1.38.0'
 </pre>
 
-$ bundle install --without production --path vendor/bundle<br>
+$ bundle install --without production --path vendor/bundle
+<br><br><br>
 
 
 ## 2: コントローラーの作成
@@ -58,6 +59,7 @@ class PostsController < ApplicationController<br>
   end
 end
 </pre>
+<br><br><br>
 
 
 ## 3: モデルとPictureUploaderの作成
@@ -92,3 +94,4 @@ end<
     &nbsp; &nbsp;     %w(jpg jpeg gif png)<br>
     &nbsp;  end<br>
 </strong>
+<br><br><br>
