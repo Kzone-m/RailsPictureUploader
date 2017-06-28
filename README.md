@@ -87,8 +87,8 @@ end<
 追加するもの2:<br>
 &nbsp;  <strong>process resize_to_limit: [400, 400]</strong><br>
 追加するもの3:<br>
-  <strong>
-&nbsp;  def extension_white_list<br>
-&nbsp;    %w(jpg jpeg gif png)<br>
-&nbsp;  end<br>
-  </strong>
+<strong>
+    &nbsp;  def extension_white_list<br>
+    &nbsp; &nbsp;     %w(jpg jpeg gif png)<br>
+    &nbsp;  end<br>
+</strong>
