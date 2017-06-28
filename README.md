@@ -96,9 +96,10 @@ end<
 </strong>
 <br><br><br>
 
+
 ## 4: フォームの作成と、それに対応するコントローラーの作成
 
-newとeditアクションで共通となるformをpartialとして作成する
+・newとeditアクションで共通となるformをpartialとして作成する<br>
 $ touch ./app/views/posts/_form.html.erb
 ### ./app/views/posts/_form.html.erb
 
@@ -123,6 +124,25 @@ $ touch ./app/views/posts/_form.html.erb
     }
   });
 </script>
+```
+
+・エラーメッセージを表示するpartial viewを作成する<br>
+$ touch ./app/views/shared/_error_messages.html.erb
+### ./app/views/shared/_error_messages.html.erb
+
+```
+<% if object.errors.any? %>
+  <div id="error-explanation">
+    <div class="alert alert-danger">
+      <p><%= object.errors.count %>個の入力情報が正しくありません。</p>
+    </div>
+    <ul id="error-messages">
+      <% object.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 ```
 
 
