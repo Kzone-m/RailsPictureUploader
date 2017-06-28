@@ -97,7 +97,7 @@ end<
 <br><br><br>
 
 
-## 4: フォームの作成と、それに対応するコントローラーの作成
+## 4: フォーム及び必要なviewの準備
 
 ・newとeditアクションで共通となるformをpartialとして作成する<br>
 $ touch ./app/views/posts/_form.html.erb
@@ -145,6 +145,53 @@ $ touch ./app/views/shared/_error_messages.html.erb
 <% end %>
 ```
 
+・投稿用、編集用、詳細用、一覧表示用、呼び出し用のviewを準備する<br>
+### ./app/views/layouts/application.html.erb
+
+```
+  <body>
+    <div class="container">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+      <%= yield %>
+    </div>
+  </body>
+```
+
+### ./app/views/posts/index.html.erb
+
+```
+<% @posts.each do |post| %>
+  <div class="container">
+    <%= image_tag post.picture.url if post.picture? %>
+    <div class="row">
+      <div class="col-sm-3 col-sm-offset-3">
+        <%= link_to "編集する", edit_post_path(post), class: "btn btn-warning"%>
+      </div>
+      <div class="col-sm-3">
+        <%= link_to "削除する", post_path(post), method: :delete, class: "btn btn-danger"%>
+      </div>
+      <div class="col-sm-3">
+        <p><%= post.content %></p>
+      </div>
+    </div>
+  </div>
+<% end %>
+```
+
+### ./app/views/posts/new.html.erb
+
+```
+<% provide(:submit_button, '投稿') %>
+<%=render "form" %>
+```
+
+### ./app/views/posts/edit.html.erb
+```
+<% provide(:submit_button, '編集') %>
+<%= render "form" %>
+```
 
 
 
