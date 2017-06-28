@@ -61,6 +61,7 @@ $ rails g model Post content:text picture:string<br>
 $ rails db:migrate<br>
 
 ### ./app/models/post.rb
+<pre>
 class Post < ApplicationRecord<br>
   mount_uploader :picture, PictureUploader<br>
   validates :content, presence: true, length: {maximum: 140}<br>
@@ -73,6 +74,7 @@ class Post < ApplicationRecord<br>
       end<br>
     end<br>
 end<br>
+</pre>
 
 ### ./app/uploaders/picture_uploader.rb
 追加するもの1:<br>
