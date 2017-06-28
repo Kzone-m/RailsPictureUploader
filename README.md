@@ -188,9 +188,15 @@ $ touch ./app/views/shared/_error_messages.html.erb
 ```
 
 ### ./app/views/posts/edit.html.erb
+
 ```
 <% provide(:submit_button, '編集') %>
 <%= render "form" %>
+```
+
+### ./app/views/posts/show.html.erb
+```
+<%= image_tag @post.picture.url if @post.picture? %>
 ```
 <br><br><br>
 
