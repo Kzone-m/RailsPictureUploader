@@ -95,3 +95,36 @@ end<
     &nbsp;  end<br>
 </strong>
 <br><br><br>
+
+## 4: フォームの作成と、それに対応するコントローラーの作成
+
+newとeditアクションで共通となるformをpartialとして作成する
+$ touch ./app/views/posts/_form.html.erb
+### ./app/views/posts/_form.html.erb
+
+'''
+<div class="col-sm-6 col-sm-offset-3">
+  <%= form_for(@post, html:{multipart: true}) do |f| %>
+  <!-- エラーメッセージを表示するpartial viewの読み込み -->
+    <%= render 'shared/error_messages', object: f.object %>
+  <!-- 投稿内容 -->  
+    <%= f.text_area :content, placeholder: "コメントどうぞ", class: "form-control", value: @post.content%>
+  <!-- 画像ファイル -->   
+    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', class: "form-control", value: @post.picture %>
+  <!-- 送信 -->
+    <%= f.submit yield(:submit_button), class: "btn btn-primary", id: "submit"%>
+  <% end %>
+</div>
+<script type="text/javascript">
+  $('#post_picture').bind('change', function() {
+    var size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert('Maximum file size is 5MB. Please choose a smaller file.');
+    }
+  });
+</script>
+'''
+
+
+
+
