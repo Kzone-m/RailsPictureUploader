@@ -102,7 +102,7 @@ newとeditアクションで共通となるformをpartialとして作成する
 $ touch ./app/views/posts/_form.html.erb
 ### ./app/views/posts/_form.html.erb
 
-'''
+```
 <div class="col-sm-6 col-sm-offset-3">
   <%= form_for(@post, html:{multipart: true}) do |f| %>
   <!-- エラーメッセージを表示するpartial viewの読み込み -->
@@ -123,7 +123,7 @@ $ touch ./app/views/posts/_form.html.erb
     }
   });
 </script>
-'''
+```
 
 
 
